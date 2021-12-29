@@ -1,5 +1,5 @@
-const GetPizzaByName = async (name='') => {
-    return await fetch(`http://localhost:8000/pizza/${name}`, {method: "GET"})
+const GetPizzaByPK = async (pk = 0) => {
+    return await fetch(`http://localhost:8000/pizza/${pk}/`, {method: "GET"})
         .then((response) => {
             return response.json();
         }).catch(() => {
@@ -7,4 +7,4 @@ const GetPizzaByName = async (name='') => {
         });
 }
 
-export default GetPizzaByName;
+export default GetPizzaByPK;

@@ -17,14 +17,16 @@ function PizzaListPage() {
         handlePizzasList();
     }, []);
 
+
     return (
         <div>
             <Header/>
-            <ul className="fs-5 ">
+            <ul className="fs-4">
                 {pizzas.map((pizza) => {
-                    return (<li key={pizza.pk}><Link to="pizza/:pk" className="text-decoration-none link-dark">
+                    return (<li key={pizza.pk}><Link to={"/pizza/" + pizza.pk.toString()}
+                                                     className="text-decoration-none link-dark">
                         {pizza.name}</Link></li>);
-                    // {location => `pizza/${pizza.pk}`}
+
                 })}
             </ul>
             <Footer/>
