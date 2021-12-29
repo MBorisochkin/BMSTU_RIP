@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Пицца</title>
+</head>
+<body>
+<ul>
+    {% for pizza in pizza_list %}
+        <li><a href="{% url 'pizzapasta:PizzaDetail' pizza.id %}">{{ pizza.name }}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>

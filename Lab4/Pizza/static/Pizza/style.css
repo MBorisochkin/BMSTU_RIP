@@ -1,0 +1,33 @@
+body {
+    background: burlywood;
+}
+
+ul {
+    color: saddlebrown;
+    list-style-type: circle;
+}
+
+a {
+    color: saddlebrown;
+    text-decoration-line: none;
+    font-size: 16pt;
+}
+
+h1 {
+    color: saddlebrown;
+}
+
+table {
+    border: saddlebrown solid;
+    border-collapse: collapse;
+}
+
+td {
+    color: saddlebrown;
+    border: saddlebrown solid thin;
+    font-size: 16pt;
+}
+
+button {
+    background-color: wheat;
+}

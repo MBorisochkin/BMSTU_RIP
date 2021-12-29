@@ -1,0 +1,30 @@
+{% extends 'Drivers/base.html' %}
+{% block title %}Отчёт{% endblock %}
+
+{% block content %}
+    <p class="h2">Отчёт "Водители, зарабатывющие более 50к"</p>
+    <table class="table table-info">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Фамилия</th>
+      <th scope="col">Имя</th>
+      <th scope="col">Зарплата</th>
+      <th scope="col">Автопарк</th>
+      <th scope="col">Адрес</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for top_driver in top_drivers %}
+      <tr>
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{ top_driver.second_name }}</td>
+      <td>{{ top_driver.first_name }}</td>
+      <td>{{ top_driver.salary }}</td>
+      <td>{{ top_driver.carstation_id.name }}</td>
+      <td>{{ top_driver.carstation_id.adress }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

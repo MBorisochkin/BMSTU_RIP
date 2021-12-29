@@ -1,0 +1,18 @@
+{% extends 'Drivers/base.html' %}
+{% block title %}Автопарки{% endblock %}
+
+{% block content %}
+    <dl class="row justify-content-start">
+    {% for carstation in carstation_list %}
+        <dt class="col-sm-2 fs-4 ms-3 my-1 pe-0">{{ carstation.name }}</dt>
+        <dd class="col-sm-3 fs-4 mx-2 my-1 px-0">{{ carstation.adress }}</dd>
+        <a href="{% url 'Drivers:carstation_edit' carstation.id %}" class="btn btn-primary col-sm-1 m-1"
+           role="button">Изменить</a>
+        <a href="{% url 'Drivers:carstation_delete' carstation.id %}" class="btn btn-danger col-sm-1 m-1"
+           role="button">Удалить</a>
+        <div class="col-sm-3 my-1"></div>
+    {% endfor %}
+    </dl>
+    <a href="{% url 'Drivers:carstation_add' %}" class="btn btn-primary col-sm-2 ms-3 mt-5"
+           role="button">Добавить автопарк</a>
+{% endblock %}

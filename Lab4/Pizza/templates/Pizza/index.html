@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Пицца</title>
+
+    {%  load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'Pizza/style.css' %}">
+</head>
+<body>
+{% if pizza_list %}
+    <ul>
+    {% for pizza in pizza_list %}
+        <li><a href="{% url 'pizza:detail' pizza.id %}">{{ pizza.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Нет доступных пицц</p>
+{% endif %}
+</body>
+</html>

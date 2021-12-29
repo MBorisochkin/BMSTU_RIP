@@ -1,0 +1,10 @@
+{% extends 'Drivers/base.html' %}
+{% block title %}Добавить автопарк{% endblock %}
+
+{% block content %}
+    <h1 class="ms-3">Новый автопарк</h1>
+    <form method="post" class="ms-3 col-sm-2">{% csrf_token %}
+    {{ form.as_p}}
+        <button type="submit" class="btn btn-success">Сохранить</button>
+    </form>
+{% endblock %}

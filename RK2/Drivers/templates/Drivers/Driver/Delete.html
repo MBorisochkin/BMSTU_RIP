@@ -1,0 +1,10 @@
+{% extends 'Drivers/base.html' %}
+{% block title %}Удалить водителя{% endblock %}
+
+{% block content %}
+    <h1 class="ms-3">Удалить водителя</h1>
+    <form method="post" class="ms-3 col-sm-3">{% csrf_token %}
+    <p>Вы действительно хотите удалить данного водителя?</p>
+        <button type="submit" class="btn btn-success">Потвердить</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Пицца "{{ pizza.name }}"</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'Pizza/style.css' %}">
+</head>
+<body>
+<table>
+    <tr>
+        <td>Название</td>
+        <td><h1>{{ pizza.name }}</h1></td>
+    </tr>
+    <tr>
+        <td>Изображение</td>
+        <td><img src="{% static 'Pizza/images/' %}{{ pizza.photo.name }}" width="640" height="480"
+                 alt="{{ pizza.name }}"></td>
+    </tr>
+    <tr>
+        <td>Состав:</td>
+        <td>{{ pizza.topping }}</td>
+    </tr>
+    <tr>
+        <td>Диаметр</td>
+        <td> {{ pizza.diameter }} см</td>
+    </tr>
+</table>
+
+<br>
+<button><a href="{% url 'pizza:index' %}">На главную</a></button>
+</body>
+</html>

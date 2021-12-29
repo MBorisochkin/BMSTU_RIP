@@ -1,0 +1,13 @@
+{% extends 'Drivers/base.html' %}
+{% block title %}Водители{% endblock %}
+
+{% block content %}
+    <ul class="list-unstyled">
+    {% for driver in driver_list %}
+        <li class="fs-4 ms-3"><a class="text-decoration-none link-dark" href="{% url 'Drivers:driver_detail' driver.id %}">
+            {{ driver }}</a></li>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'Drivers:driver_add' %}" class="btn btn-primary ms-3 mt-5"
+           role="button">Добавить водителя</a>
+{% endblock %}
