@@ -8,7 +8,7 @@ function Header() {
                 <Navbar.Brand as={Link} to="/">Лаб 8</Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link as={Link} to="/">Главная</Nav.Link>
-                    <Nav.Link as={Link} to="/new">Пиццы</Nav.Link>
+                    <Nav.Link as={Link} to="/pizza">Пиццы</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>

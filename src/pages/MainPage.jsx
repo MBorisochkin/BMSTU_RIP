@@ -4,9 +4,9 @@ import Footer from "../components/Footer";
 function MainPage() {
     return (
         <div>
-            <Header></Header>
-            <h1>Это наша стартовая страница</h1>
-            <Footer></Footer>
+            <Header/>
+            <h1 className="ms-3">Это наша стартовая страница</h1>
+            <Footer/>
         </div>
     );
 }
