@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">PizzaApp</string>
+    <string name="btn_create_pizza">Добавить пиццу</string>
+    <string name="topping_hint">Введите состав</string>
+    <string name="tv_topping">Cостав:</string>
+    <string name="name_hint">Введите название</string>
+    <string name="tv_name">Название:</string>
+    <string name="rb_23">23 см</string>
+    <string name="rb_30">30 см</string>
+    <string name="rb_40">40 см</string>
+    <string name="tv_diameter">Диаметр</string>
+    <string name="rb_35">35 см</string>
+    <string name="btn_save">Сохранить</string>
+    <string name="btn_change">Изменить</string>
+    <string name="btn_delete">Удалить</string>
+</resources>
